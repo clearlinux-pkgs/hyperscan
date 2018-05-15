@@ -4,7 +4,7 @@
 #
 Name     : hyperscan
 Version  : 4.7.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/intel/hyperscan/archive/v4.7.0.tar.gz
 Source0  : https://github.com/intel/hyperscan/archive/v4.7.0.tar.gz
 Summary  : Intel(R) Hyperscan Library
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522180736
+export SOURCE_DATE_EPOCH=1526367327
 mkdir clr-build
 pushd clr-build
 cmake .. -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS:BOOL=ON -DLIB_INSTALL_DIR:PATH=/usr/lib64 -DCMAKE_AR=/usr/bin/gcc-ar -DLIB_SUFFIX=64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_RANLIB=/usr/bin/gcc-ranlib
@@ -98,7 +98,7 @@ make VERBOSE=1  %{?_smp_mflags}  || :
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1522180736
+export SOURCE_DATE_EPOCH=1526367327
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/lib64/haswell/avx512_1
 pushd clr-build-avx2
@@ -140,9 +140,6 @@ popd
 /usr/lib64/haswell/avx512_1/libhs.so
 /usr/lib64/haswell/avx512_1/libhs.so.4
 /usr/lib64/haswell/avx512_1/libhs.so.4.7.0
-/usr/lib64/haswell/avx512_1/libhs_runtime.so
-/usr/lib64/haswell/avx512_1/libhs_runtime.so.4
-/usr/lib64/haswell/avx512_1/libhs_runtime.so.4.7.0
 /usr/lib64/haswell/libhs.so.4
 /usr/lib64/haswell/libhs.so.4.7.0
 /usr/lib64/haswell/libhs_runtime.so.4
