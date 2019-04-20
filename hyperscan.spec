@@ -4,7 +4,7 @@
 #
 Name     : hyperscan
 Version  : 5.1.0
-Release  : 7
+Release  : 8
 URL      : https://github.com/intel/hyperscan/archive/v5.1.0.tar.gz
 Source0  : https://github.com/intel/hyperscan/archive/v5.1.0.tar.gz
 Summary  : A high-performance multiple regex matching library, commonly used with suricata or snort.
