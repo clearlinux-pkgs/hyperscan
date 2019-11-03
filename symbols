@@ -62,6 +62,8 @@ libhs.so.5:hs_alloc_scratch
 libhs.so.5:hs_clone_scratch
 libhs.so.5:hs_compile
 libhs.so.5:hs_compile_ext_multi
+libhs.so.5:hs_compile_lit
+libhs.so.5:hs_compile_lit_multi
 libhs.so.5:hs_compile_multi
 libhs.so.5:hs_expression_ext_info
 libhs.so.5:hs_expression_info
