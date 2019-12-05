@@ -4,7 +4,7 @@
 #
 Name     : hyperscan
 Version  : 5.2.1
-Release  : 10
+Release  : 11
 URL      : https://github.com/intel/hyperscan/archive/v5.2.1/hyperscan-5.2.1.tar.gz
 Source0  : https://github.com/intel/hyperscan/archive/v5.2.1/hyperscan-5.2.1.tar.gz
 Summary  : High-performance regular expression matching library
