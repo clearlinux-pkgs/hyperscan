@@ -4,7 +4,7 @@
 #
 Name     : hyperscan
 Version  : 5.3.0
-Release  : 13
+Release  : 14
 URL      : https://github.com/intel/hyperscan/archive/v5.3.0/hyperscan-5.3.0.tar.gz
 Source0  : https://github.com/intel/hyperscan/archive/v5.3.0/hyperscan-5.3.0.tar.gz
 Summary  : Intel(R) Hyperscan Library
