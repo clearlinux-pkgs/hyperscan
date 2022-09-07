@@ -3,6 +3,6 @@
 boost-dev
 python3-dev
 ragel
-Sphinx
+pypi(sphinx)
 doxygen
 util-linux
