@@ -5,7 +5,7 @@
 #
 Name     : hyperscan
 Version  : 5.4.0
-Release  : 29
+Release  : 30
 URL      : https://github.com/intel/hyperscan/archive/v5.4.0/hyperscan-5.4.0.tar.gz
 Source0  : https://github.com/intel/hyperscan/archive/v5.4.0/hyperscan-5.4.0.tar.gz
 Summary  : Intel(R) Hyperscan Library
@@ -73,14 +73,14 @@ license components for the hyperscan package.
 %prep
 %setup -q -n hyperscan-5.4.0
 cd %{_builddir}/hyperscan-5.4.0
-%patch1 -p1
+%patch -P 1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682984640
+export SOURCE_DATE_EPOCH=1687466055
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -127,7 +127,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1682984640
+export SOURCE_DATE_EPOCH=1687466055
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/hyperscan
 cp %{_builddir}/hyperscan-%{version}/COPYING %{buildroot}/usr/share/package-licenses/hyperscan/460136879250bc39dbc8be7799af9c079527808f || :
@@ -149,10 +149,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libhs.so
-/V3/usr/lib64/libhs_runtime.so
-/V4/usr/lib64/libhs.so
-/V4/usr/lib64/libhs_runtime.so
 /usr/include/hs/hs.h
 /usr/include/hs/hs_common.h
 /usr/include/hs/hs_compile.h
@@ -167,13 +163,9 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libhs.so.5
 /V3/usr/lib64/libhs.so.5.4.0
-/V3/usr/lib64/libhs_runtime.so.5
 /V3/usr/lib64/libhs_runtime.so.5.4.0
-/V4/usr/lib64/libhs.so.5
 /V4/usr/lib64/libhs.so.5.4.0
-/V4/usr/lib64/libhs_runtime.so.5
 /V4/usr/lib64/libhs_runtime.so.5.4.0
 /usr/lib64/libhs.so.5
 /usr/lib64/libhs.so.5.4.0
